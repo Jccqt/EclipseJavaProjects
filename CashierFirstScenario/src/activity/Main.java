@@ -6,6 +6,7 @@ import java.util.Scanner;
 import java.util.Stack;
 import java.lang.Thread;
 
+
 public class Main {
 	
 	//Global Objects
@@ -30,8 +31,14 @@ public class Main {
 	public static void main(String[]args) {
 		
 		for(int i = 0; i < 20; i++) {
-			System.out.print("Enter customer: ");
-			int customerNum = input.nextInt();
+			System.out.print("Enter a customer number: ");
+			String customerNum = input.next();
+			
+			//will loop while the user input is not numerical
+			while(!customerChecker(customerNum)) {
+				System.out.print("Invalid input! Please input numbers only: ");
+				customerNum = input.next();
+			}
 			
 			//will add customers to queue
 			customers.offer("Customer " + customerNum);
@@ -59,6 +66,7 @@ public class Main {
 		
 		manualReverse(); // will reverse/sort the items manually
 		
+		System.out.println("\nCustomers queue is now full! Will start to accomodate customers now.");
 		int cashierCounter = 1;
 		try {
 			for(int i = 0; i < 4; i++) {
@@ -113,4 +121,9 @@ public class Main {
 			customersReverse5.offer(customers5.pop());
 		}
 	}// end of manualReverse method
+	
+	public static boolean customerChecker(String customerNum) {
+		return customerNum.matches("[0-9]*");
+	}// end of customerChecker
+	
 }// end of Main class
