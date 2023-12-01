@@ -2,6 +2,7 @@ package hands_on_activity;
 
 import java.util.Scanner;
 import java.util.PriorityQueue;
+import java.util.Random;
 
 public class Main {
 	
