@@ -3,6 +3,7 @@ package hands_on_activity;
 import java.util.Scanner;
 import java.util.PriorityQueue;
 
+
 public class Main {
 	
 	public static void main(String[]args) {
