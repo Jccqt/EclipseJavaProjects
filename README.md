@@ -1,2 +1,2 @@
 # EclipseJavaProjects
- Tambakan ng mga activities sa Dastral at OOP
+ Tambakan ng mga activities sa Dastral, OOP at OS
